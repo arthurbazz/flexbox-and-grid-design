@@ -1,0 +1,275 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/*===== CSS RESET =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===== CSS VARIABLES =====*/
+:root {
+  /* Flex layout Variables */
+  --background-color: hsl(0, 0%, 95%);
+  --color: hsla(0, 0%, 100%, 0.75);
+  --height: 100vh;
+  --display-flex: flex;
+  --flex-direction-column: column;
+  --justify-content-center: center;
+  --align-items-center: center;
+  --flex-basis-20: 20%;
+  --flex-basis-32: 32%;
+  --height-item-65: 65%;
+  --height-item-400: 400px;
+  --border-radius-sd: 7px 0 0 7px;
+  --border-radius-lux: 0 7px 7px 0;
+  --border-radius-mob-sd: 7px 7px 0 0;
+  --border-radius-mob-lux: 0 0 7px 7px;
+  --btn-margin-top: auto;
+  --font-size-15: 15px;
+  --padding-20: 20px;
+  --padding-30: 30px;
+  --cursor-pointer: pointer;
+}
+
+#flex-body {
+  background-color: var(--background-color);
+}
+
+header {
+  margin: 30px 5%;
+}
+
+/*===== FLEX CONTAINER =====*/
+.container {
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
+  min-height: var(--height);
+}
+
+/* ===== FLEX ITEMS =====*/
+.sedans-item {
+  flex-basis: var(--flex-basis-20);
+  display: var(--display-flex);
+  flex-direction: var(--flex-direction-column);
+  background-color: hsl(31, 77%, 52%);
+  height: var(--height-item-65);
+  border-radius: var(--border-radius-sd);
+  font-size: var(--font-size-15);
+  padding: var(--padding-30);
+}
+
+.suvs-item {
+  flex-basis: var(--flex-basis-20);
+  display: var(--display-flex);
+  flex-direction: var(--flex-direction-column);
+  background-color: hsl(184, 100%, 22%);
+  height: var(--height-item-65);
+  font-size: var(--font-size-15);
+  padding: var(--padding-30);
+}
+
+.luxury-item {
+  flex-basis: var(--flex-basis-20);
+  display: var(--display-flex);
+  flex-direction: var(--flex-direction-column);
+  background-color: hsl(179, 100%, 13%);
+  height: var(--height-item-65);
+  border-radius: var(--border-radius-lux);
+  font-size: var(--font-size-15);
+  padding: var(--padding-30);
+}
+
+img {
+  padding-bottom: var(--padding-20);
+  max-width: 60px;
+}
+
+h1 {
+  padding-bottom: var(--padding-20);
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/*===== BUTTONS =====*/
+.btn {
+  border-radius: 9999px;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.btn:hover {
+  cursor: var(--cursor-pointer);
+}
+
+.link-btn {
+  border-radius: 9999px;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(0, 0%, 95%);
+}
+
+.link-btn:hover {
+  cursor: var(--cursor-pointer);
+}
+
+.sedans-item .btn-div {
+  margin-top: var(--btn-margin-top);
+}
+
+.suvs-item .btn-div {
+  margin-top: var(--btn-margin-top);
+}
+
+.luxury-item .btn-div {
+  margin-top: var(--btn-margin-top);
+}
+
+.sedans-item .btn {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs-item .btn {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury-item .btn {
+  color: hsl(179, 100%, 13%);
+}
+
+/*===== MOBILE MEDIA QUERY =====*/
+@media all and (max-width: 481px) {
+  .container {
+    /* display: flex; */
+    flex-direction: column;
+    max-width: 80%;
+    margin: 45% auto;
+  }
+
+  p {
+    padding-bottom: var(--padding-30);
+  }
+
+  .sedans-item {
+    border-radius: var(--border-radius-mob-sd);
+  }
+
+  .luxury-item {
+    border-radius: var(--border-radius-mob-lux);
+  }
+}
+
+/*===== TABLETS MEDIA QUERY =====*/
+@media all and (min-width: 482px) and (max-width: 767px) {
+  .container {
+    /* display: flex; */
+    flex-direction: column;
+    max-width: 60%;
+    margin: 45% auto;
+  }
+
+  p {
+    padding-bottom: var(--padding-30);
+  }
+
+  .sedans-item {
+    border-radius: var(--border-radius-mob-sd);
+  }
+
+  .luxury-item {
+    border-radius: var(--border-radius-mob-lux);
+  }
+}
+
+/*===== SMALL SCREEN MEDIA QUERY =====*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .sedans-item {
+    flex-basis: var(--flex-basis-32);
+    height: var(--height-item-400);
+  }
+
+  .suvs-item {
+    flex-basis: var(--flex-basis-32);
+    height: var(--height-item-400);
+  }
+
+  .luxury-item {
+    flex-basis: var(--flex-basis-32);
+    height: var(--height-item-400);
+  }
+}
+
+/*===== GRID LAYOUT STYLES =====*/
+#grid-body {
+  background-color: rgb(8, 36, 59);
+  display: grid;
+  justify-items: center;
+  min-height: 80vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "a a a b"
+    "a a a b"
+    "c c d d"
+    "c c e e";
+  gap: 7px;
+  width: 50%;
+}
+
+.grid-container > div {
+  padding: 3em;
+}
+
+.item-a {
+  background-color: #eb5020;
+  grid-area: a;
+}
+
+.item-b {
+  background-color: #ffa401;
+  grid-area: b;
+}
+
+.item-c {
+  background-color: #05aa42;
+  grid-area: c;
+}
+
+.item-d {
+  background-color: #01aefd;
+  grid-area: d;
+}
+
+.item-e {
+  background-color: #01aefd;
+  grid-area: e;
+}
+
+/*===== GRID MOBILE & ABLETS MEDIA QUERY =====*/
+@media all and (max-width: 767px) {
+  .grid-container {
+    width: 95%;
+  }
+}
+
+/*===== GRID SMALL SCREEN MEDIA QUERY =====*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .grid-container {
+    width: 80%;
+  }
+}
