@@ -46,7 +46,7 @@ header {
   display: var(--display-flex);
   justify-content: var(--justify-content-center);
   align-items: var(--align-items-center);
-  min-height: var(--height);
+  height: var(--height);
 }
 
 /* ===== FLEX ITEMS =====*/
