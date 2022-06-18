@@ -8,8 +8,9 @@ I used Flexbox and Grid CSS layout to test my knowledge on both CSS flexbox and 
 
 The major challenge I faced was adding adding the fractional unit (fr) for a layout that spanned same columns and rows, which I was able to do after googling.
 
-## Live view
-This project can be viewed live [Here](https://arthurbazz.github.io/flexbox-and-grid-design/index.html)
+## Live version
+This project can be viewed live [Here](https://arthurbazz.github.io/flexbox-and-grid-design/index.html).
+To open link in another tab use CTRL + Click
 
 ## Credits
-This was possible by following Zuri Team training on frontend development and also  googling topics when stuck or confused. 
+This is possible by following Zuri Team training on frontend development and also  googling topics when stuck or confused. 
